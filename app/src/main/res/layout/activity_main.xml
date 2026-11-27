@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- Górny pasek z tytułem aplikacji -->
+    <TextView
+        android:id="@+id/tvNaglowek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0057E7"
+        android:gravity="center"
+        android:paddingVertical="14dp"
+        android:text="Planer treningów"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- Grafika nagłówkowa -->
+    <ImageView
+        android:id="@+id/ivSportowiec"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:contentDescription="Grafika nagłówkowa sportowca"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sportowiec" />
+
+    <!-- Główna sekcja robocza -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="16dp">
+
+        <!-- Przycisk losowania ćwiczenia -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLosujCwiczenie"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="LOSUJ ĆWICZENIE"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="#0057E7"
+            app:cornerRadius="10dp" />
+
+        <!-- Ramka z grafiką aktualnego ćwiczenia -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="#F5F8FC"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#D5DFEC"
+            app:strokeWidth="1dp">
+
+            <ImageView
+                android:id="@+id/ivAktualneCwiczenie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Grafika aktualnego ćwiczenia"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/cwiczenie0" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Nazwa aktualnego ćwiczenia -->
+        <TextView
+            android:id="@+id/tvNazwaCwiczenia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Losuj ćwiczenie"
+            android:textColor="#141B29"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Wiersz z przyciskami - / + oraz licznikiem serii -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMinus"
+                android:layout_width="64dp"
+                android:layout_height="56dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="−"
+                android:textColor="#141B29"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="#C5D0DF"
+                app:cornerRadius="12dp" />
+
+            <TextView
+                android:id="@+id/tvLicznikSerii"
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#141B29"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPlus"
+                android:layout_width="64dp"
+                android:layout_height="56dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="+"
+                android:textColor="#141B29"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="#C5D0DF"
+                app:cornerRadius="12dp" />
+        </LinearLayout>
+
+        <!-- Wiersz z przyciskami NASTĘPNE ĆWICZENIE oraz RESET -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNastepneCwiczenie"
+                android:layout_width="0dp"
+                android:layout_height="62dp"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:lineSpacingExtra="-2dp"
+                android:text="NASTĘPNE\nĆWICZENIE"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:backgroundTint="#009E49"
+                app:cornerRadius="10dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReset"
+                android:layout_width="0dp"
+                android:layout_height="62dp"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="RESET"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:backgroundTint="#E52527"
+                app:cornerRadius="10dp" />
+        </LinearLayout>
+
+        <!-- Etykieta łącznej liczby wykonanych serii -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="#E9EFF8"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#CFD9E8"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:id="@+id/tvLacznaLiczbaSerii"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingVertical="12dp"
+                android:text="Łączna liczba serii: 0"
+                android:textColor="#141B29"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</LinearLayout>
