@@ -6,7 +6,7 @@ Aplikacja mobilna na system Android stworzona w środowisku **Android Studio** (
 
 ## 📱 Zrzut ekranu
 
-> *(Tutaj umieść zrzut ekranu z działającej aplikacji, np. `![Zrzut ekranu](screenshot.png)`)*
+> *(Tutaj umieść zrzut ekranu z działającej aplikacji, np. `![Zrzut ekranu](dzialajacaapka.jpg)`)*
 
 ---
 
