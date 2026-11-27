@@ -4,12 +4,6 @@ Aplikacja mobilna na system Android stworzona w środowisku **Android Studio** (
 
 ---
 
-## 📱 Zrzut ekranu
-
-> *(Tutaj umieść zrzut ekranu z działającej aplikacji, np. `![Zrzut ekranu](dzialajacaapka.jpg)`)*
-
----
-
 ## ✨ Funkcjonalności
 
 * **Losowanie ćwiczenia (`LOSUJ ĆWICZENIE`)** – losuje jedno z 6 dostępnych ćwiczeń za pomocą klasy `Random`, wyświetla przypisaną do niego grafikę oraz nazwę, a także zeruje licznik serii bieżącego ćwiczenia.
